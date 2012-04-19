@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+        "http://struts.apache.org/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+    <definition name="goodsList.page" path="/view/layouts/layout.jsp">
+        <put name="header" value="/view/tiles/header.jsp"/>
+        <put name="body" value="/view/tiles/body.jsp"/>
+        <put name="footer" value="/view/tiles/footer.jsp"/>
+        <put name="category" value="/view/tiles/body.jsp"/>
+        <put name="subCategory" value="/view/tiles/body.jsp"/>
+        <put name="unit" value="/view/tiles/body.jsp"/>
+    </definition>
+    <definition name="category" path="/view/tiles/goods/category.jsp">
+        <put name="subCategory" type="string" value=""/>
+    </definition>
+    <definition name="category.page" extends="goodsList.page">
+        <put name="body" type="definition" value="category"/>
+        <!--<put name="subCategory" type="string" value=""/>-->
+    </definition>
+
+
+    <!--   <definition name="subCategory" path="/view/tiles/goods/category.jsp">
+        <put name="subCategory" value="/view/tiles/goods/subCategory.jsp"/>
+    </definition>-->
+    <!--   <definition name="unit" path="/view/tiles/goods/subCategory.jsp" >
+        <put name="subCategory" value="/view/tiles/goods/subCategory.jsp">
+             <put name="unit" value="/view/tiles/goods/unit.jsp"/>
+        </put>
+    </definition>-->
+    <definition name="subCategory.page" extends="category.page">
+        <!--<put name="body"  value="/view/tiles/goods/category.jsp"/>-->
+        <put name="subCategory" value="true"/>
+
+        <!--<put name="subCategory" value="/view/tiles/goods/subCategory.jsp"/>-->
+        <!--<put name="body" type="definition" value="category"/>-->
+
+        <!-- <putList name="body">
+            <add value="/view/tiles/goods/category.jsp"/>
+            <add value="/view/tiles/goods/subCategory.jsp"/>
+        </putList>-->
+        <!-- <put name="category" value="/view/tiles/goods/category.jsp"/>
+      <put name="subCategory" value="/view/tiles/goods/subCategory.jsp"/>
+      <put name="unit" value="/view/tiles/body.jsp"/>-->
+    </definition>
+    <definition name="unit.page" extends="category.page">
+        <put name="subCategory" value="/view/tiles/goods/unit.jsp"/>
+        <!-- <putList name="body">
+            <add value="/view/tiles/goods/category.jsp"/>
+            <add value="/view/tiles/goods/subCategory.jsp"/>
+            <add value="/view/tiles/goods/unit.jsp"/>
+        </putList>-->
+        <!--<put name="category" value="/view/tiles/goods/category.jsp"/>
+        <put name="subCategory" value="/view/tiles/goods/subCategory.jsp"/>
+        <put name="unit" value="/view/tiles/goods/unit.jsp"/>-->
+    </definition>
+    <definition name="error.page" extends="goodsList.page">
+        <put name="body" value="/view/error.jsp"/>
+    </definition>
+
+</tiles-definitions>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="struts (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/bsf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/struts-taglib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/struts-tiles.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/struts-faces.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/struts-scripting.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/struts-el.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
